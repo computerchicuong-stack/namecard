@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chí Cường - Digital Card</title>
+    <style>
+        body { font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", sans-serif; 
+               background-color: #f0f2f5; margin: 0; display: flex; justify-content: center; align-items: center; min-height: 100vh; color: #1d1d1f; }
+        .card { width: 85%; max-width: 380px; background: white; border-radius: 24px; padding: 35px 25px; text-align: center; box-shadow: 0 20px 40px rgba(0,0,0,0.08); }
+        .avatar { width: 110px; height: 110px; border-radius: 50%; border: 4px solid #fff; box-shadow: 0 5px 15px rgba(0,0,0,0.1); margin-bottom: 15px; object-fit: cover; }
+        
+        h1 { font-size: 24px; margin: 10px 0 8px; font-weight: 700; }
+        
+        /* Giới thiệu 3 ngôn ngữ */
+        .intro-box { margin-bottom: 25px; }
+        .lang-vi { font-size: 15px; color: #1d1d1f; font-weight: 500; margin-bottom: 4px; }
+        .lang-en { font-size: 13px; color: #86868b; margin-bottom: 4px; text-transform: uppercase; letter-spacing: 0.5px; }
+        .lang-zh { font-size: 14px; color: #007aff; font-weight: 400; }
+
+        .links { display: flex; flex-direction: column; gap: 12px; }
+        .btn { padding: 15px; border-radius: 14px; text-decoration: none; font-weight: 600; font-size: 15px; transition: all 0.2s ease; display: flex; align-items: center; justify-content: center; gap: 10px; }
+        .btn:active { transform: scale(0.97); }
+        
+        .btn-wechat { background: #07c160; color: white; }
+        .btn-zalo { background: #0068ff; color: white; }
+        .btn-web { background: #1d1d1f; color: white; }
+        .btn-outline { border: 1.5px solid #007aff; color: #007aff; }
+
+        .qr-section { margin-top: 30px; padding-top: 20px; border-top: 1px dashed #d2d2d7; }
+        .qr-code { width: 160px; height: 160px; margin-top: 12px; border: 1px solid #f0f0f0; padding: 5px; border-radius: 10px; }
+        .footer { margin-top: 25px; font-size: 11px; color: #b9b9b9; letter-spacing: 1px; }
+    </style>
+</head>
+<body>
+
+<div class="card">
+    <img src="https://computerchicuong.vn/uploads/logo.png" alt="Chí Cường" class="avatar">
+    
+    <h1>Nguyễn Chí Cường</h1>
+    
+    <div class="intro-box">
+        <div class="lang-vi">Giải pháp Quản lý Kho & Marketing</div>
+        <div class="lang-en">Warehouse & Marketing Solutions</div>
+        <div class="lang-zh">仓库管理与数字化营销方案</div>
+    </div>
+
+    <div class="links">
+        <a href="#" class="btn btn-wechat" onclick="copyWeChat()">🟢 WeChat ID: ChiCuong_Tech</a>
+        <a href="https://computerchicuong.vn" class="btn btn-web">🌐 Website (Global)</a>
+        <a href="https://zalo.me/0908943468" class="btn btn-zalo">💬 Zalo (Vietnam)</a>
+        <a href="tel:0908943468" class="btn btn-outline">📞 Call Me / 联系电话</a>
+    </div>
+
+    <div class="qr-section">
+        <b style="font-size: 14px;">WeChat QR Code / 微信二维码</b><br>
+        <img src="https://via.placeholder.com/160?text=Your+WeChat+QR" alt="WeChat QR" class="qr-code">
+    </div>
+
+    <div class="footer">
+        DESIGNED BY CHI CUONG © 2026
+    </div>
+</div>
+
+<script>
+    function copyWeChat() {
+        const id = "ChiCuong_Tech"; // Thay ID WeChat thật của bạn vào đây
+        navigator.clipboard.writeText(id);
+        alert("Đã sao chép WeChat ID: " + id + "\n已复制微信号");
+    }
+</script>
+
+</body>
+</html>
