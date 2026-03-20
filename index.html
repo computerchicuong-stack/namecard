@@ -12,7 +12,6 @@
         
         h1 { font-size: 24px; margin: 10px 0 8px; font-weight: 700; }
         
-        /* Giới thiệu 3 ngôn ngữ */
         .intro-box { margin-bottom: 25px; }
         .lang-vi { font-size: 15px; color: #1d1d1f; font-weight: 500; margin-bottom: 4px; }
         .lang-en { font-size: 13px; color: #86868b; margin-bottom: 4px; text-transform: uppercase; letter-spacing: 0.5px; }
@@ -23,19 +22,20 @@
         .btn:active { transform: scale(0.97); }
         
         .btn-wechat { background: #07c160; color: white; }
+        .btn-whatsapp { background: #25D366; color: white; }
         .btn-zalo { background: #0068ff; color: white; }
         .btn-web { background: #1d1d1f; color: white; }
         .btn-outline { border: 1.5px solid #007aff; color: #007aff; }
 
         .qr-section { margin-top: 30px; padding-top: 20px; border-top: 1px dashed #d2d2d7; }
-        .qr-code { width: 160px; height: 160px; margin-top: 12px; border: 1px solid #f0f0f0; padding: 5px; border-radius: 10px; }
-        .footer { margin-top: 25px; font-size: 11px; color: #b9b9b9; letter-spacing: 1px; }
+        .qr-code { width: 180px; height: 180px; margin-top: 12px; border: 1px solid #f0f0f0; padding: 5px; border-radius: 10px; object-fit: contain; }
+        .footer { margin-top: 25px; font-size: 11px; color: #b9b9b9; letter-spacing: 1px; line-height: 1.5; }
     </style>
 </head>
 <body>
 
 <div class="card">
-    <img src="https://scontent-hkg1-1.xx.fbcdn.net/v/t39.30808-6/647046952_26160850133545927_4173749741071357543_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=1d70fc&_nc_ohc=0ttbug3Svg8Q7kNvwHdJzy2&_nc_oc=AdrH8BT9JySbi_d3iZ_jypIKX2Nc7Xo21WsvOvwflu8T25Z4xE-pDMZF4D9gh6SVPDI&_nc_zt=23&_nc_ht=scontent-hkg1-1.xx&_nc_gid=SywcHhW2g59gy5uHophkFg&_nc_ss=7a30f&oh=00_AfzQxUOvA0zFdn52JjuCY-lmMMfGHg0LugExz8rNez45oA&oe=69C28E76" alt="Chí Cường" class="avatar">
+    <img src="https://computerchicuong.vn/uploads/logo.png" alt="Chí Cường" class="avatar">
     
     <h1>Nguyễn Chí Cường</h1>
     
@@ -47,24 +47,27 @@
 
     <div class="links">
         <a href="#" class="btn btn-wechat" onclick="copyWeChat()">🟢 WeChat ID: ChiCuong_Tech</a>
-        <a href="https://computerchicuong.vn" class="btn btn-web">🌐 Website (Global)</a>
-        <a href="https://zalo.me/0908943468" class="btn btn-zalo">💬 Zalo (Vietnam)</a>
-        <a href="tel:0908943468" class="btn btn-outline">📞 Call Me / 联系电话</a>
+        <a href="https://wa.me/84908943468" target="_blank" class="btn btn-whatsapp">📞 WhatsApp (International)</a>
+        <a href="https://computerchicuong.vn" target="_blank" class="btn btn-web">🌐 Website: computerchicuong.vn</a>
+        <a href="https://zalo.me/0908943468" target="_blank" class="btn btn-zalo">💬 Zalo: 0908.943.468</a>
+        <a href="tel:0908943468" class="btn btn-outline">📱 Hotline: 0908.943.468</a>
     </div>
 
     <div class="qr-section">
         <b style="font-size: 14px;">WeChat QR Code / 微信二维码</b><br>
-        <img src="https://via.placeholder.com/160?text=Your+WeChat+QR" alt="WeChat QR" class="qr-code">
+        <img src="ccn.jpg" alt="WeChat QR" class="qr-code">
+        <p style="font-size: 11px; color: #86868b; margin-top: 8px;">Scan to connect / 扫一扫 加上微信</p>
     </div>
 
     <div class="footer">
-        DESIGNED BY CHI CUONG © 2026
+        DESIGNED BY CHI CUONG © 2026<br>
+        96/32 Đỗ Tấn Phong, Phường Đức Nhuận, TP HCM
     </div>
 </div>
 
 <script>
     function copyWeChat() {
-        const id = "ChiCuong_Tech"; // Thay ID WeChat thật của bạn vào đây
+        const id = "ChiCuong_Tech"; 
         navigator.clipboard.writeText(id);
         alert("Đã sao chép WeChat ID: " + id + "\n已复制微信号");
     }
